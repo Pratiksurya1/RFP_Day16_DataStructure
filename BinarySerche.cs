@@ -43,7 +43,6 @@ namespace RFP_Data_Structures
                 // Check if x is present at mid
                 if (res == 0)
                     Console.WriteLine(x+" is present at index "+m);
-                  //  return m;
 
                 // If x greater, ignore left half
                 if (res > 0)
@@ -53,10 +52,56 @@ namespace RFP_Data_Structures
                 else
                     r = m - 1;
             }
-            
+        }
+        public void BubleSort(int[] arr)
+        {
+            Display<int>(arr);
+            int n = arr.Length;
+            for (int i = 0; i < n - 1; i++)
+            {
+                for (int j = 0; j < n - i - 1; j++)
+                {
 
+
+                    if (arr[j] > arr[j + 1])
+                    {
+                        int temp = arr[j];
+                        arr[j] = arr[j + 1];
+                        arr[j + 1] = temp;
+                    }
+                }
+            }
+            Console.WriteLine("\n----------- Sorted Array ----------------\n");
+            Display<int>(arr);
+        }
+
+
+        public void InsertionSort(String[]array)
+        {
+            int i, j;
+
+            Display<String>(array);
+            for (i = 1; i < array.Length; i++)
+            {
+                IComparable value = array[i];
+                j = i - 1;
+                while ((j >= 0) && (array[j].CompareTo(value) > 0))
+                {
+                    array[j + 1] = array[j];
+                    j--;
+                }
+                array[j + 1] = (string)value;              
+            }
+            Console.WriteLine("\n----------- Sorted Array ----------------\n");
+            Display<String>(array);
+        }
+        static public void Display<T>(T[] array)
+        {
+            for (int i= 0; i< array.Length; i++)
+            {
+                Console.WriteLine(array[i]);
+            }
         }
     }
-
 }
 
