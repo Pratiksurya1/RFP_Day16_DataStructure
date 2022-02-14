@@ -16,7 +16,6 @@ namespace RFP_Data_Structures
             //binarySerche.binarySearch("pratik");
 
 
-
             //4
             int[] arr = { 55, 4, 3, 88, 46, 92, 11, };
             binarySerche.BubleSort(arr);
@@ -24,6 +23,9 @@ namespace RFP_Data_Structures
             //3
             String[] arr2 = { "z", "a", "b", "p", "d" };
             binarySerche.InsertionSort(arr2);
+
+
+            binarySerche.PrimeNumber();
         }
     }
 }

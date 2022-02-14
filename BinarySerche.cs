@@ -25,8 +25,9 @@ namespace RFP_Data_Structures
                     foreach (String s in valueArr)
                     {
                         Console.WriteLine(s);
-                    }
-                    Console.WriteLine(valueArr[2]);
+                    };
+                    Console.WriteLine(valueArr[1]);
+                  
                 }
             }
         }
@@ -61,8 +62,6 @@ namespace RFP_Data_Structures
             {
                 for (int j = 0; j < n - i - 1; j++)
                 {
-
-
                     if (arr[j] > arr[j + 1])
                     {
                         int temp = arr[j];
@@ -102,6 +101,32 @@ namespace RFP_Data_Structures
                 Console.WriteLine(array[i]);
             }
         }
+        
+        public void PrimeNumber()
+        {
+            int Flag = 0;
+            Console.Write("Prime no: ");
+          for(int i= 0; i<100; i++)
+            {
+                Flag = 0;
+                if(i > 1)
+                {
+                    for(int j= 2; j<i; j++)
+                    {
+                        if (i % j == 0)
+                        {
+                            Flag = 1;
+                            break;
+                        }
+                    }
+                    if (Flag == 0)
+                    {
+                        Console.Write(i+", ");
+                    }
+                }
+            }
+        }
+
     }
 }
 
